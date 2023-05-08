@@ -13,7 +13,7 @@ public class MyDB extends SQLiteOpenHelper {
 
     private static SQLiteDatabase db;
     //nombre de la base de datos
-    private static final String database = "MyProducts";
+    private static final String database = "MyPlates";
     //versión de la base de datos
     private static final int version = 11;
 
@@ -120,11 +120,11 @@ public class MyDB extends SQLiteOpenHelper {
 
     private void insercionDatos(SQLiteDatabase db) {
         db.execSQL("INSERT INTO plate(id, name, description, price) VALUES (0, 'Pizza Margarita', 'Tomate, mozzarella y orégano', 8.0);");
-        db.execSQL("INSERT INTO plate(id, name, description, price) VALUES (0, 'Pizza Carbonara', 'Nata, mozzarella, bacon', 10.0);");
-        db.execSQL("INSERT INTO plate(id, name, description, price) VALUES (0, 'Pizza 4 Quesos', 'Mozzarella, roquefort, emmental y cabra', 12.0);");
-        db.execSQL("INSERT INTO plate(id, name, description, price) VALUES (0, 'Pizza Pesto', 'Tomate, mozzarella, queso de cabra, pesto y orégano', 12.5);");
-        db.execSQL("INSERT INTO plate(id, name, description, price) VALUES (0, 'Pizza Ternera', 'Pan, ternera, cebolla, lechuga, tomate y queso', 12.0);");
-        db.execSQL("INSERT INTO plate(id, name, description, price) VALUES (0, 'Pizza Pollo', 'Pan, ternera, cebolla, lechuga, tomate y queso', 10.5);");
+        db.execSQL("INSERT INTO plate(id, name, description, price) VALUES (1, 'Pizza Carbonara', 'Nata, mozzarella, bacon', 10.0);");
+        db.execSQL("INSERT INTO plate(id, name, description, price) VALUES (2, 'Pizza 4 Quesos', 'Mozzarella, roquefort, emmental y cabra', 12.0);");
+        db.execSQL("INSERT INTO plate(id, name, description, price) VALUES (3, 'Pizza Pesto', 'Tomate, mozzarella, queso de cabra, pesto y orégano', 12.5);");
+        db.execSQL("INSERT INTO plate(id, name, description, price) VALUES (4, 'Pizza Ternera', 'Pan, ternera, cebolla, lechuga, tomate y queso', 12.0);");
+        db.execSQL("INSERT INTO plate(id, name, description, price) VALUES (5, 'Pizza Pollo', 'Pan, ternera, cebolla, lechuga, tomate y queso', 10.5);");
     }
 
 }

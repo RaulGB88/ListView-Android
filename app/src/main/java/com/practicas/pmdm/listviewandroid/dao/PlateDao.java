@@ -11,6 +11,7 @@ import java.util.List;
 
 public class PlateDao implements PojoDao {
 
+    /*
     public List<Plate> getPlateList() {
 
         List plateList = new ArrayList();
@@ -23,6 +24,7 @@ public class PlateDao implements PojoDao {
 
         return plateList;
     }
+    */
 
     /**
      * @param obj

@@ -13,6 +13,7 @@ public class MyPlateOperate {
     private MyDB myDB;
 
     public MyPlateOperate(Context context) {
+        myDB = MyDB.getInstance(context);
     }
 
     //***************************************
