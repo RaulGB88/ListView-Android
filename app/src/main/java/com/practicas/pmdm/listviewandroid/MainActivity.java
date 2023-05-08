@@ -7,6 +7,7 @@ import android.widget.ListView;
 
 import com.practicas.pmdm.listviewandroid.adapter.PlateArrayAdapter;
 import com.practicas.pmdm.listviewandroid.dao.PlateDao;
+import com.practicas.pmdm.listviewandroid.db.MyPlateOperate;
 import com.practicas.pmdm.listviewandroid.model.Plate;
 
 import java.util.List;
@@ -30,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
         // Get list for layout.
         lvMenu = findViewById(R.id.lvList);
         // Get Data.
-        listPlate = plateDao.getPlateList();
+        MyPlateOperate myPlateOperate = MyPlateOperate.getInstance(this);
+        listPlate = plateDao.getAll();
         // Init Adapter.
         adapter = new PlateArrayAdapter(this, listPlate);
         // Set Adapter to List.
