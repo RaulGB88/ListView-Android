@@ -28,13 +28,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init() {
+
+        // Init Data from DB.
+        MyPlateOperate myPlateOperate = MyPlateOperate.getInstance(this);
+
+        // Get List from Plate.
+        listPlate = plateDao.getAll();
+
+        // Init Adapter and set a list from Object.
+        adapter = new PlateArrayAdapter(this, listPlate);
+
         // Get list for layout.
         lvMenu = findViewById(R.id.lvList);
-        // Get Data.
-        MyPlateOperate myPlateOperate = MyPlateOperate.getInstance(this);
-        listPlate = plateDao.getAll();
-        // Init Adapter.
-        adapter = new PlateArrayAdapter(this, listPlate);
         // Set Adapter to List.
         lvMenu.setAdapter(adapter);
     }
