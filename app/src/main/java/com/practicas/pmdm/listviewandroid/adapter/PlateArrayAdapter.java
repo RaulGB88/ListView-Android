@@ -40,6 +40,7 @@ public class PlateArrayAdapter extends ArrayAdapter<Plate> {
             listItemView = inflater.inflate(R.layout.list_row, parent, false);
         }
 
+        // Get TextView rows / atributtes
         //Obteniendo instancias de los text views y del ImageView
         TextView name = (TextView) listItemView.findViewById(R.id.tvName);
         TextView description = (TextView) listItemView.findViewById(R.id.tvDescription);
@@ -54,6 +55,7 @@ public class PlateArrayAdapter extends ArrayAdapter<Plate> {
         // NO: PlateArrayAdapter<Plate> (Sin operador diamante)
         name.setText(plate.getName());
         description.setText(plate.getDescription());
+        price.setText(plate.getPrice().toString());
         image.setImageResource(plate.getImage());
 
         // ---- STRINGS ----
